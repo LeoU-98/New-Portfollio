@@ -15,12 +15,12 @@ function Projects() {
   const result = PROJECTS.filter((e) => e.id <= visbleProjects);
 
   return (
-    <div className="pb-4">
+    <section id="projects" className="pb-4 pt-10">
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
-        className="my-20 text-center text-4xl"
+        className="my-20  text-center text-4xl"
       >
         Projects
       </motion.h2>
@@ -37,7 +37,7 @@ function Projects() {
           {PROJECTS.length === result.length ? "Show less" : "Show more"}
         </button>
       </div>
-    </div>
+    </section>
   );
 }
 

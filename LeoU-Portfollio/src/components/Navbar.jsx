@@ -24,22 +24,34 @@ function NavList() {
         </a>
       </li> */}
       <li className=" ">
-        <a className="size-full  duration-300 rounded-full  hover:text-black hover:bg-white text-white cursor-pointer  py-3   p-2">
+        <a
+          href="#skills"
+          className="size-full  duration-300 rounded-full  hover:text-black hover:bg-white text-white cursor-pointer  py-3   p-2"
+        >
           Skills
         </a>
       </li>
       <li className=" ">
-        <a className="size-full  duration-300 rounded-full  hover:text-black hover:bg-white text-white cursor-pointer  py-3   p-2">
+        <a
+          href="#projects"
+          className="size-full  duration-300 rounded-full  hover:text-black hover:bg-white text-white cursor-pointer  py-3   p-2"
+        >
           Projects
         </a>
       </li>
       <li className=" ">
-        <a className="size-full  duration-300 rounded-full  hover:text-black hover:bg-white text-white cursor-pointer  py-3   p-2">
+        <a
+          href="#experience"
+          className="size-full  duration-300 rounded-full  hover:text-black hover:bg-white text-white cursor-pointer  py-3   p-2"
+        >
           Experience
         </a>
       </li>
       <li className=" ">
-        <a className="size-full  duration-300 rounded-full hover:text-black hover:bg-white text-white cursor-pointer   py-3  p-2">
+        <a
+          href="#contact"
+          className="size-full  duration-300 rounded-full hover:text-black hover:bg-white text-white cursor-pointer   py-3  p-2"
+        >
           Contact Me
         </a>
       </li>

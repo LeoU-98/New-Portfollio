@@ -9,6 +9,10 @@
   background: #000000;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .proj-imgbx::before {
   content: "";
   background-color: black;
