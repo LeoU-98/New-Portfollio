@@ -77,17 +77,6 @@ function Hero() {
               <span className="absolute w-1/4 h-full bg-black  translate-y-[150%] rounded-full left-[calc((var(--n)-1)*25%)]  duration-500  delay-[calc((var(--n)-1)*0.1s)] group-hover:translate-y-0 group-hover:scale-[2]  [--n:3;] z-[-1]"></span>
               <span className="absolute w-1/4 h-full bg-black translate-y-[150%] rounded-full left-[calc((var(--n)-1)*25%)]   duration-500  delay-[calc((var(--n)-1)*0.1s)]  group-hover:translate-y-0 group-hover:scale-[2] [--n:4;] z-[-1]"></span>
             </motion.a>
-
-            {/* <motion.a
-              variants={childVariants}
-              href="/resume.pdf"
-              target="_blank"
-              rel="nooperner noreferrer"
-              download
-              className="bg-white rounded-full p-4 text-sm text-stone-800 mb-10"
-            >
-              Download Resume
-            </motion.a> */}
           </motion.div>
         </div>
       </div>

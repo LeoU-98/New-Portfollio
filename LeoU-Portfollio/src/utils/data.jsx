@@ -25,12 +25,12 @@ export const skills = [
     skills: [
       {
         skillTitle: "HTML5",
-        icon: <SiHtml5 className="text-7xl text-orange-500" />,
+        icon: <SiHtml5 className="text-7xl   text-orange-500" />,
         level: "experienced",
       },
       {
         skillTitle: "JSX",
-        icon: <BsFiletypeJsx className="text-7xl text-violet-500" />,
+        icon: <BsFiletypeJsx className="text-7xl   text-violet-500" />,
         level: "experienced",
       },
     ],
@@ -41,22 +41,22 @@ export const skills = [
     skills: [
       {
         skillTitle: "Javascript",
-        icon: <RiJavascriptFill className="text-7xl text-yellow-500" />,
+        icon: <RiJavascriptFill className="text-7xl   text-yellow-500" />,
         level: "experienced",
       },
       {
         skillTitle: "Typescript",
-        icon: <BiLogoTypescript className="text-7xl text-[#2563eb]" />,
+        icon: <BiLogoTypescript className="text-7xl   text-[#2563eb]" />,
         level: "experienced",
       },
       {
         skillTitle: "React",
-        icon: <RiReactjsLine className="text-7xl text-[#22d3ee]  " />,
+        icon: <RiReactjsLine className="text-7xl   text-[#22d3ee]  " />,
         level: "experienced",
       },
       {
         skillTitle: "NextJS",
-        icon: <TbBrandNextjs className="text-7xl" />,
+        icon: <TbBrandNextjs className="text-7xl  " />,
         level: "experienced",
       },
     ],
@@ -66,17 +66,17 @@ export const skills = [
     skills: [
       {
         skillTitle: "Css3",
-        icon: <IoLogoCss3 className="text-7xl text-blue-800" />,
+        icon: <IoLogoCss3 className="text-7xl   text-blue-800" />,
         level: "experienced",
       },
       {
         skillTitle: "Tailwind",
-        icon: <RiTailwindCssFill className="text-7xl text-sky-500" />,
+        icon: <RiTailwindCssFill className="text-7xl   text-sky-500" />,
         level: "experienced",
       },
       {
         skillTitle: "Sass",
-        icon: <IoLogoSass className="text-7xl text-pink-600" />,
+        icon: <IoLogoSass className="text-7xl   text-pink-600" />,
         level: "experienced",
       },
     ],
@@ -86,13 +86,13 @@ export const skills = [
     skills: [
       {
         skillTitle: "Git",
-        icon: <FaGitAlt className="text-7xl text-orange-500" />,
+        icon: <FaGitAlt className="text-7xl  text-orange-500" />,
         level: "experienced",
       },
 
       {
         skillTitle: "Git Hub",
-        icon: <FaSquareGithub className="text-7xl" />,
+        icon: <FaSquareGithub className="text-7xl" text-4xl />,
         level: "experienced",
       },
     ],

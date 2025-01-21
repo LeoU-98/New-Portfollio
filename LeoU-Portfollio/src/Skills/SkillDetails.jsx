@@ -20,13 +20,13 @@ const iconVariants = (duration) => ({
   },
 });
 
-function SkillDetails({ details }) {
-  const { title, skills } = details;
+function SkillDetails({ details, className }) {
+  const { skills } = details;
 
   console.log(skills);
 
   return (
-    <div className="pb-24">
+    <div className={className}>
       <motion.div
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: -100 }}
@@ -36,46 +36,6 @@ function SkillDetails({ details }) {
         {skills.map((skill, index) => (
           <Skill key={index} data={skill} />
         ))}
-
-        {/* <motion.div
-          initial="initial"
-          animate="animate"
-          variants={iconVariants(2.5)}
-        >
-          <RiReactjsLine className="text-7xl text-cyan-400 " />
-        </motion.div>
-        <motion.div
-          initial="initial"
-          animate="animate"
-          variants={iconVariants(3)}
-          className="p-4"
-        >
-          <TbBrandNextjs className="text-7xl" />
-        </motion.div>
-        <motion.div
-          initial="initial"
-          animate="animate"
-          variants={iconVariants(5)}
-          className="p-4"
-        >
-          <SiMongodb className="text-7xl text-cyan-500 " />
-        </motion.div>
-        <motion.div
-          className="p-4"
-          initial="initial"
-          animate="animate"
-          variants={iconVariants(2)}
-        >
-          <DiRedis className="text-7xl text-red-700 " />
-        </motion.div>
-        <motion.div
-          initial="initial"
-          animate="animate"
-          variants={iconVariants(6)}
-          className="p-4"
-        >
-          <FaNodeJs className="text-7xl text-green-500 " />
-        </motion.div> */}
       </motion.div>
     </div>
   );
@@ -83,7 +43,7 @@ function SkillDetails({ details }) {
 
 function Skill({ data }) {
   return (
-    <div className="flex flex-col gap-2 items-center">
+    <div className="flex flex-col gap-1 items-center  ">
       <motion.div
         initial="initial"
         animate="animate"
@@ -101,6 +61,7 @@ export default SkillDetails;
 
 SkillDetails.propTypes = {
   details: propTypes.object,
+  className: propTypes.string,
 };
 
 Skill.propTypes = {

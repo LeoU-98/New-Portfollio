@@ -9,9 +9,11 @@ import { GiClick } from "react-icons/gi";
 import { CiText } from "react-icons/ci";
 import { BsDatabaseFillGear } from "react-icons/bs";
 
-function SkillButtons({ setSkillsData, skillsData }) {
+function SkillButtons({ setSkillsData, skillsData, className }) {
   return (
-    <ul className="grid h-fit w-8/12 min-w-72 grid-cols-2 grid-rows-2 gap-10 md:max-w-80">
+    <ul
+      className={`${className} grid h-fit w-8/12 min-w-72 grid-cols-2 grid-rows-2 gap-10 md:max-w-80`}
+    >
       <SkillButton
         icon={<CiText className="size-9" />}
         alt={"markup icon"}
@@ -70,6 +72,7 @@ function SkillButton({ icon, alt, text, setSkillsData, isActive }) {
 SkillButtons.propTypes = {
   setSkillsData: propTypes.func,
   skillsData: propTypes.object,
+  className: propTypes.string,
 };
 
 SkillButton.propTypes = {

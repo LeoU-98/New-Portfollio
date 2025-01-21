@@ -20,7 +20,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto px-8 bg-black/30 rounded-2xl ">
+      <div className="container mx-auto sm:px-8 bg-black/30 rounded-2xl ">
         <Navbar />
 
         <Hero />
