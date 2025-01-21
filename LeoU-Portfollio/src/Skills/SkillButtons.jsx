@@ -40,34 +40,6 @@ function SkillButtons({ setSkillsData, skillsData }) {
         setSkillsData={setSkillsData}
         isActive={skillsData?.title?.toLowerCase() === "tools"}
       />
-      {/* <SkillButton
-        imageSource={markup}
-        alt={"markup icon"}
-        text={"markup"}
-        setSkillsData={setSkillsData}
-        isActive={skillsData?.title?.toLowerCase() === "markup"}
-      />
-      <SkillButton
-        imageSource={interactivity}
-        alt={"interactivity icon"}
-        text={"interactivity"}
-        setSkillsData={setSkillsData}
-        isActive={skillsData?.title?.toLowerCase() === "interactivity"}
-      />
-      <SkillButton
-        imageSource={styling}
-        alt={"styling icon"}
-        text={"styling"}
-        setSkillsData={setSkillsData}
-        isActive={skillsData?.title?.toLowerCase() === "styling"}
-      />
-      <SkillButton
-        imageSource={softskills}
-        alt={"tools icon"}
-        text={"tools"}
-        setSkillsData={setSkillsData}
-        isActive={skillsData?.title?.toLowerCase() === "tools"}
-      /> */}
     </ul>
   );
 }

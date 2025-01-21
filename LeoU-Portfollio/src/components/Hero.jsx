@@ -69,10 +69,25 @@ function Hero() {
               target="_blank"
               rel="nooperner noreferrer"
               download
+              className="bg-white text-black border-white border-2 border-solid block text-sm  mb-10 rounded-full px-4 py-3 uppercase font-medium font-sans relative overflow-hidden z-[1] duration-500   hover:text-white group"
+            >
+              Download Resume
+              <span className="absolute w-1/4 h-full bg-black translate-y-[150%] rounded-full left-[calc((var(--n)-1)*25%)]  duration-500  delay-[calc((var(--n)-1)*0.1s)]  group-hover:translate-y-0 group-hover:scale-[2] [--n:1;]   z-[-1]"></span>
+              <span className="absolute w-1/4 h-full bg-black  translate-y-[150%] rounded-full left-[calc((var(--n)-1)*25%)]  duration-500  delay-[calc((var(--n)-1)*0.1s)]  group-hover:translate-y-0 group-hover:scale-[2] [--n:2;] z-[-1]"></span>
+              <span className="absolute w-1/4 h-full bg-black  translate-y-[150%] rounded-full left-[calc((var(--n)-1)*25%)]  duration-500  delay-[calc((var(--n)-1)*0.1s)] group-hover:translate-y-0 group-hover:scale-[2]  [--n:3;] z-[-1]"></span>
+              <span className="absolute w-1/4 h-full bg-black translate-y-[150%] rounded-full left-[calc((var(--n)-1)*25%)]   duration-500  delay-[calc((var(--n)-1)*0.1s)]  group-hover:translate-y-0 group-hover:scale-[2] [--n:4;] z-[-1]"></span>
+            </motion.a>
+
+            {/* <motion.a
+              variants={childVariants}
+              href="/resume.pdf"
+              target="_blank"
+              rel="nooperner noreferrer"
+              download
               className="bg-white rounded-full p-4 text-sm text-stone-800 mb-10"
             >
               Download Resume
-            </motion.a>
+            </motion.a> */}
           </motion.div>
         </div>
       </div>
