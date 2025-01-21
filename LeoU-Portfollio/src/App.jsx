@@ -22,7 +22,7 @@ function App() {
         <Navbar />
 
         <Hero />
-        <Technologies />
+        {/* <Technologies /> */}
         <Skills />
         <Projects />
         <Experience />

@@ -17,29 +17,29 @@ export default Navbar;
 
 function NavList() {
   return (
-    <ul className="  bg-white/10 flex  p-3 rounded-full gap-4 ">
+    <ul className="  bg-white/10 flex  p-4 rounded-full gap-4 ">
       {/* <li className=" ">
         <a className="size-full  duration-300 rounded-full  hover:text-black hover:bg-white text-white cursor-pointer p-2">
           Home
         </a>
       </li> */}
       <li className=" ">
-        <a className="size-full  duration-300 rounded-full  hover:text-black hover:bg-white text-white cursor-pointer p-2">
+        <a className="size-full  duration-300 rounded-full  hover:text-black hover:bg-white text-white cursor-pointer  py-3   p-2">
           Skills
         </a>
       </li>
       <li className=" ">
-        <a className="size-full  duration-300 rounded-full  hover:text-black hover:bg-white text-white cursor-pointer p-2">
+        <a className="size-full  duration-300 rounded-full  hover:text-black hover:bg-white text-white cursor-pointer  py-3   p-2">
           Projects
         </a>
       </li>
       <li className=" ">
-        <a className="size-full  duration-300 rounded-full  hover:text-black hover:bg-white text-white cursor-pointer p-2">
+        <a className="size-full  duration-300 rounded-full  hover:text-black hover:bg-white text-white cursor-pointer  py-3   p-2">
           Experience
         </a>
       </li>
       <li className=" ">
-        <a className="size-full  duration-300 rounded-full hover:text-black hover:bg-white text-white cursor-pointer p-2">
+        <a className="size-full  duration-300 rounded-full hover:text-black hover:bg-white text-white cursor-pointer   py-3  p-2">
           Contact Me
         </a>
       </li>

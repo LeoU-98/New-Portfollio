@@ -188,3 +188,48 @@ export const workData = [
     ],
   },
 ];
+
+/////////////////////////
+
+export const PROJECTS = [
+  {
+    id: 1,
+    title: "AnimeU",
+    image: AnimeU,
+    demoLink: "https://leou-98.github.io/AnimeU/",
+    repoLink: "https://github.com/LeoU-98/AnimeU",
+    description:
+      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
+    technologies: ["React", "Vanllia CSS"],
+  },
+  {
+    id: 2,
+    title: "LeoU Plants",
+    image: Plant,
+    demoLink: "https://leou-98.github.io/LeoU-Plants/",
+    repoLink: "https://github.com/LeoU-98/LeoU-Plants",
+    description:
+      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
+    technologies: ["React", "Vanllia CSS"],
+  },
+  {
+    id: 3,
+    title: "Crypto",
+    image: Crypto,
+    demoLink: "https://leou-98.github.io/Crypto/",
+    repoLink: "https://github.com/LeoU-98/Crypto",
+    description:
+      "A personal portfolio website showcasing projects, skills, and contact information.",
+    technologies: ["React", "Tailwind"],
+  },
+  {
+    id: 4,
+    title: "Trillio",
+    image: Trillio,
+    demoLink: "https://leou-98.github.io/Crypto/",
+    repoLink: "https://github.com/LeoU-98/Crypto",
+    description:
+      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
+    technologies: ["React", "Tailwind"],
+  },
+];
