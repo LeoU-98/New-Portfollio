@@ -5,8 +5,8 @@ import Footer from "./Contact/Footer";
 import Hero from "./Hero/Hero";
 import Navbar from "./Navbar/Navbar";
 import Projects from "./Projects/Projects";
-import Technologies from "./components/Technologies";
 import Skills from "./Skills/Skills";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
@@ -21,10 +21,9 @@ function App() {
         </div>
       </div>
       <div className="container mx-auto sm:px-8 bg-black/30 rounded-2xl ">
+        <Toaster />
         <Navbar />
-
         <Hero />
-        {/* <Technologies /> */}
         <Skills />
         <Projects />
         <Experience />

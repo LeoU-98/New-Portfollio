@@ -1,6 +1,9 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import propTypes from "prop-types";
+import toast from "react-hot-toast";
+import { FaCheckCircle } from "react-icons/fa";
+import { FaCircleXmark } from "react-icons/fa6";
 
 export default function ContactForm({ className }) {
   const form = useRef();
@@ -11,6 +14,8 @@ export default function ContactForm({ className }) {
     message: "",
   });
 
+  const { firstName, lastName, email, message } = data;
+
   function handleChange(e) {
     setData({
       ...data,
@@ -20,6 +25,18 @@ export default function ContactForm({ className }) {
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    if (firstName === "" || lastName === "" || email === "" || message === "") {
+      toast.custom(
+        <div className=" bg-white p-4 gap-2 rounded-3xl flex items-center">
+          <FaCircleXmark className=" rounded-full  bg-white fill-red-500 size-5" />
+          <p className="text-black">
+            Please Don&apos;t leave any empty fields 😅
+          </p>
+        </div>
+      );
+      return;
+    }
 
     emailjs
       .sendForm("service_g4fcqxk", "template_usetzt9", form.current, {
@@ -34,6 +51,13 @@ export default function ContactForm({ className }) {
           console.log("FAILED...", error.text);
         }
       );
+
+    toast.custom(
+      <div className=" bg-white p-4 gap-2 rounded-3xl flex items-center">
+        <FaCheckCircle className=" rounded-full border-[1px] border-white border-solid bg-white fill-green-500 size-5" />
+        <p className="text-black">Your message has been sent , Thank You 😊</p>
+      </div>
+    );
   };
 
   return (

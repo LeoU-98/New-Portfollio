@@ -33,7 +33,7 @@ export const SKILLS = [
   {
     id: 1,
     icon: <CiText className="size-9" />,
-    title: "markup",
+    title: "Markup",
     skills: [
       {
         skillTitle: "HTML",
@@ -49,7 +49,7 @@ export const SKILLS = [
   {
     id: 2,
     icon: <GiClick className="size-9" />,
-    title: "interactivity",
+    title: "Interactivity",
     skills: [
       {
         skillTitle: "Javascript",
@@ -72,7 +72,7 @@ export const SKILLS = [
   {
     id: 3,
     icon: <HiOutlinePaintBrush className="size-9" />,
-    title: "styling",
+    title: "Styling",
     skills: [
       {
         skillTitle: "CSS",
@@ -91,7 +91,7 @@ export const SKILLS = [
   {
     id: 4,
     icon: <BsDatabaseFillGear className="size-9" />,
-    title: "tools",
+    title: "Tools",
     skills: [
       {
         skillTitle: "Git",

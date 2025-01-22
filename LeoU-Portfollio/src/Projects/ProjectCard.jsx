@@ -5,7 +5,7 @@ export default function ProjectCard({ data }) {
   const { image, demoLink, repoLink, title, description, technologies } = data;
 
   return (
-    <div className=" mb-8 flex flex-col  lg:flex-row  items-center sm:items-start md:gap-4 justify-center">
+    <div className=" mb-8 flex flex-col  lg:flex-row  items-center  md:gap-4 justify-center">
       <motion.div
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: -100 }}
@@ -39,7 +39,7 @@ export default function ProjectCard({ data }) {
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: 100 }}
         transition={{ duration: 1 }}
-        className="w-full max-w-xl xl:w-3/4 md:w-1/2 "
+        className="w-full max-w-xl xl:w-3/4 "
       >
         <h3 className="mb-2 font-semibold text-2xl">{title}</h3>
         <p className="mb-4 text-stone-400 md:text-balance ">{description}</p>

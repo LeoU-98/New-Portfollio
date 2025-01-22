@@ -20,8 +20,6 @@ function SkillDetails({ currentSkillsID, className }) {
     (skill) => skill.id === currentSkillsID
   ).skills;
 
-  console.log(currentSkillsDetails);
-
   return (
     <div className={className}>
       <motion.div
@@ -39,7 +37,7 @@ function SkillDetails({ currentSkillsID, className }) {
 }
 
 function Skill({ data }) {
-  const { icon, skillTitle, level } = data;
+  const { icon, skillTitle } = data;
   return (
     <div className="flex flex-col gap-1 items-center  ">
       <motion.div
@@ -50,7 +48,6 @@ function Skill({ data }) {
         {icon}
       </motion.div>
       <p className="mt-3">{skillTitle}</p>
-      {/* <p className="capitalize">{level}</p> */}
     </div>
   );
 }
