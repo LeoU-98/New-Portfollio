@@ -1,10 +1,10 @@
 import "./App.css";
-import Contact from "./components/Contact";
-import Experience from "./components/Experience";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import Projects from "./components/Projects";
+import Contact from "./Contact/Contact";
+import Experience from "./Experience/Experience";
+import Footer from "./Contact/Footer";
+import Hero from "./Hero/Hero";
+import Navbar from "./Navbar/Navbar";
+import Projects from "./Projects/Projects";
 import Technologies from "./components/Technologies";
 import Skills from "./Skills/Skills";
 

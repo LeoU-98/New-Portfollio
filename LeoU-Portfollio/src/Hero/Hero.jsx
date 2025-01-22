@@ -1,5 +1,5 @@
 import profilePic from "../assets/raviKumarProfile.webp";
-import { HERO_CONTENT } from "../constants";
+import { HERO_CONTENT } from "../constants/data.jsx";
 import { motion } from "framer-motion";
 
 const containerVariants = {

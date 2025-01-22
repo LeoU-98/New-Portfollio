@@ -1,32 +1,8 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { motion } from "framer-motion";
-import contact from "../assets/contact.svg";
+import propTypes from "prop-types";
 
-function Contact() {
-  return (
-    <section id="contact" className="pb-4  ">
-      <motion.h2
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.5 }}
-        className="my-20  text-center text-4xl"
-      >
-        Contact Me
-      </motion.h2>
-      <div className="flex items-center gap-8">
-        <div className=" basis-1/2">
-          <img src={contact} />
-        </div>
-        <ContactForm />
-      </div>
-    </section>
-  );
-}
-
-export default Contact;
-
-function ContactForm() {
+export default function ContactForm({ className }) {
   const form = useRef();
   const [data, setData] = useState({
     firstName: "",
@@ -61,7 +37,7 @@ function ContactForm() {
   };
 
   return (
-    <div className="px-4 ">
+    <div className={`px-4 ${className}`}>
       <form
         ref={form}
         className="flex min-h-96 flex-col justify-center gap-3 text-white"
@@ -111,3 +87,5 @@ function ContactForm() {
     </div>
   );
 }
+
+ContactForm.propTypes = { className: propTypes.string };

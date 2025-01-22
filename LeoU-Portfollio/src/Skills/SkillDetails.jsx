@@ -1,11 +1,6 @@
 import propTypes from "prop-types";
 import { motion } from "framer-motion";
-import { RiReactjsLine } from "react-icons/ri";
-import { TbBrandNextjs } from "react-icons/tb";
-import { SiMongodb } from "react-icons/si";
-import { DiRedis } from "react-icons/di";
-import { FaNodeJs } from "react-icons/fa";
-import { skills } from "../utils/data.jsx";
+import { SKILLS } from "../constants/data.jsx";
 
 const iconVariants = (duration) => ({
   initial: { y: -10 },
@@ -20,10 +15,12 @@ const iconVariants = (duration) => ({
   },
 });
 
-function SkillDetails({ details, className }) {
-  const { skills } = details;
+function SkillDetails({ currentSkillsID, className }) {
+  const currentSkillsDetails = SKILLS.find(
+    (skill) => skill.id === currentSkillsID
+  ).skills;
 
-  console.log(skills);
+  console.log(currentSkillsDetails);
 
   return (
     <div className={className}>
@@ -33,7 +30,7 @@ function SkillDetails({ details, className }) {
         transition={{ duration: 1.5 }}
         className="flex flex-wrap items-center justify-center gap-5"
       >
-        {skills.map((skill, index) => (
+        {currentSkillsDetails.map((skill, index) => (
           <Skill key={index} data={skill} />
         ))}
       </motion.div>
@@ -42,6 +39,7 @@ function SkillDetails({ details, className }) {
 }
 
 function Skill({ data }) {
+  const { icon, skillTitle, level } = data;
   return (
     <div className="flex flex-col gap-1 items-center  ">
       <motion.div
@@ -49,18 +47,17 @@ function Skill({ data }) {
         animate="animate"
         variants={iconVariants(2.5)}
       >
-        {data?.icon}
+        {icon}
       </motion.div>
-      <p>{data?.skillTitle}</p>
-      <p>{data?.level}</p>
+      <p className="mt-3">{skillTitle}</p>
+      {/* <p className="capitalize">{level}</p> */}
     </div>
   );
 }
-
 export default SkillDetails;
 
 SkillDetails.propTypes = {
-  details: propTypes.object,
+  currentSkillsID: propTypes.number,
   className: propTypes.string,
 };
 

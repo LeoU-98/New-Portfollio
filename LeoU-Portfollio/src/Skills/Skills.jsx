@@ -1,31 +1,37 @@
 import { useState } from "react";
 import SkillDetails from "./SkillDetails.jsx";
-import SkillButtons from "./SkillButtons.jsx";
-import { skills } from "../utils/data.jsx";
+import { SKILLS } from "../constants/data.jsx";
 import { motion } from "framer-motion";
+import SkillButton from "./SkillButton";
 
 function Skills() {
-  const [skillsData, setSkillsData] = useState(skills[0]);
+  const [currentSkillsID, setCurrentSkillsID] = useState(1);
 
   return (
     <section className="" id="skills">
       <motion.h2
+        className="my-20 text-center text-4xl"
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 1.5 }}
-        className="my-20  text-center text-4xl "
       >
-        Skills{" "}
+        Skills
       </motion.h2>
       <div className="flex items-center gap-10 px-4 flex-col-reverse md:flex-row xl:justify-center ">
-        <SkillButtons
-          setSkillsData={setSkillsData}
-          skillsData={skillsData}
-          className={" md:basis-1/2 lg:grow-0 lg:shrink-0 lg:w-1/2"}
-        />
+        <ul className="md:basis-1/2 lg:grow-0 lg:shrink-0 lg:w-1/2 grid h-fit w-8/12 min-w-72 grid-cols-2 grid-rows-2 gap-10 md:max-w-80">
+          {SKILLS.map((button, index) => (
+            <SkillButton
+              data={button}
+              currentSkillsID={currentSkillsID}
+              setCurrentSkillsID={setCurrentSkillsID}
+              key={index}
+            />
+          ))}
+        </ul>
+
         <SkillDetails
-          details={skillsData}
-          className={"md:basis-1/2 lg:grow-0 lg:shrink-0 lg:w-1/2"}
+          currentSkillsID={currentSkillsID}
+          className="md:basis-1/2 lg:grow-0 lg:shrink-0 lg:w-1/2"
         />
       </div>
     </section>
