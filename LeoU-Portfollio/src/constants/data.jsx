@@ -37,10 +37,12 @@ export const SKILLS = [
     skills: [
       {
         skillTitle: "HTML",
+        duration: 1,
         icon: <SiHtml5 className="text-7xl   text-orange-500" />,
       },
       {
         skillTitle: "JSX",
+        duration: 1.2,
         icon: <BsFiletypeJsx className="text-7xl   text-violet-500" />,
       },
     ],
@@ -53,18 +55,22 @@ export const SKILLS = [
     skills: [
       {
         skillTitle: "Javascript",
+        duration: 1,
         icon: <RiJavascriptFill className="text-7xl   text-yellow-500" />,
       },
       {
         skillTitle: "Typescript",
+        duration: 1.2,
         icon: <BiLogoTypescript className="text-7xl   text-[#2563eb]" />,
       },
       {
         skillTitle: "React",
+        duration: 1.4,
         icon: <RiReactjsLine className="text-7xl   text-[#22d3ee]  " />,
       },
       {
         skillTitle: "NextJS",
+        duration: 1.6,
         icon: <TbBrandNextjs className="text-7xl  " />,
       },
     ],
@@ -76,14 +82,17 @@ export const SKILLS = [
     skills: [
       {
         skillTitle: "CSS",
+        duration: 1,
         icon: <IoLogoCss3 className="text-7xl   text-blue-800" />,
       },
       {
         skillTitle: "Tailwind",
+        duration: 1.2,
         icon: <RiTailwindCssFill className="text-7xl   text-sky-500" />,
       },
       {
         skillTitle: "Sass",
+        duration: 1.4,
         icon: <IoLogoSass className="text-7xl   text-pink-600" />,
       },
     ],
@@ -95,11 +104,13 @@ export const SKILLS = [
     skills: [
       {
         skillTitle: "Git",
+        duration: 1,
         icon: <FaGitAlt className="text-7xl  text-orange-500" />,
       },
 
       {
         skillTitle: "Git Hub",
+        duration: 1.2,
         icon: <FaSquareGithub className="text-7xl" text-4xl />,
       },
     ],

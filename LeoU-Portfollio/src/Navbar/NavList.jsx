@@ -1,6 +1,24 @@
+import { motion } from "framer-motion";
+
+const navVariants = {
+  hidden: { y: -200 },
+  visible: {
+    y: 0,
+    transition: {
+      delay: 2,
+      duration: 0.8,
+    },
+  },
+};
+
 function NavList() {
   return (
-    <ul className="sm:flex gap-4 hidden">
+    <motion.ul
+      className="sm:flex gap-4 hidden"
+      variants={navVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <li>
         <a
           href="#skills"
@@ -51,7 +69,7 @@ function NavList() {
           <span className="absolute w-1/4 h-full bg-white translate-y-[150%] rounded-full left-[calc((var(--n)-1)*25%)]   duration-500  delay-[calc((var(--n)-1)*0.1s)]  group-hover:translate-y-0 group-hover:scale-[2] [--n:4;] z-[-1]"></span>
         </a>
       </li>
-    </ul>
+    </motion.ul>
   );
 }
 

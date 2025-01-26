@@ -15,6 +15,22 @@ const iconVariants = (duration) => ({
   },
 });
 
+const iconContainerVariants = {
+  hidden: {
+    opacity: 0,
+    x: 200,
+  },
+
+  visible: {
+    opacity: 1,
+    x: 0,
+
+    transition: {
+      duration: 1.5,
+    },
+  },
+};
+
 function SkillDetails({ currentSkillsID, className }) {
   const currentSkillsDetails = SKILLS.find(
     (skill) => skill.id === currentSkillsID
@@ -23,9 +39,9 @@ function SkillDetails({ currentSkillsID, className }) {
   return (
     <div className={className}>
       <motion.div
-        whileInView={{ opacity: 1, x: 0 }}
-        initial={{ opacity: 0, x: -100 }}
-        transition={{ duration: 1.5 }}
+        variants={iconContainerVariants}
+        whileInView="visible"
+        initial="hidden"
         className="flex flex-wrap items-center justify-center gap-5"
       >
         {currentSkillsDetails.map((skill, index) => (
@@ -37,13 +53,13 @@ function SkillDetails({ currentSkillsID, className }) {
 }
 
 function Skill({ data }) {
-  const { icon, skillTitle } = data;
+  const { icon, skillTitle, duration } = data;
   return (
-    <div className="flex flex-col gap-1 items-center  ">
+    <div className="flex flex-col gap-1 items-center ">
       <motion.div
         initial="initial"
         animate="animate"
-        variants={iconVariants(2.5)}
+        variants={iconVariants(duration)}
       >
         {icon}
       </motion.div>
