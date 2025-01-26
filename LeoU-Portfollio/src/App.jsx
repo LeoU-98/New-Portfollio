@@ -10,7 +10,7 @@ import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
-    <div className="overflow-x-hidden text-stone-300 antialiased  ">
+    <div className=" overflow-x-hidden text-stone-300 antialiased  ">
       <div className="fixed inset-0 -z-10">
         <div className="relative h-screen">
           <div className="absolute inset-0">

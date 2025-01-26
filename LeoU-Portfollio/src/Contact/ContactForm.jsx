@@ -4,6 +4,23 @@ import propTypes from "prop-types";
 import toast from "react-hot-toast";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaCircleXmark } from "react-icons/fa6";
+import { motion } from "framer-motion";
+
+const contactFormVariants = {
+  hidden: {
+    opacity: 0,
+    x: 200,
+  },
+
+  visible: {
+    opacity: 1,
+    x: 0,
+
+    transition: {
+      duration: 1.5,
+    },
+  },
+};
 
 export default function ContactForm({ className }) {
   const form = useRef();
@@ -61,7 +78,12 @@ export default function ContactForm({ className }) {
   };
 
   return (
-    <div className={`px-4 ${className}`}>
+    <motion.div
+      variants={contactFormVariants}
+      initial="hidden"
+      whileInView="visible"
+      className={`px-4 ${className}`}
+    >
       <form
         ref={form}
         className="flex min-h-96 flex-col justify-center gap-3 text-white"
@@ -108,7 +130,7 @@ export default function ContactForm({ className }) {
           Send
         </button>
       </form>
-    </div>
+    </motion.div>
   );
 }
 

@@ -6,6 +6,22 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { motion } from "framer-motion";
+
+const footerIconContainerVariants = {
+  hidden: {
+    opacity: 0,
+    y: -50,
+  },
+
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
 
 function Footer() {
   return (
@@ -21,7 +37,12 @@ export default Footer;
 
 function FooterLinks() {
   return (
-    <ul className="flex">
+    <motion.ul
+      variants={footerIconContainerVariants}
+      whileInView="visible"
+      initial="hidden"
+      className="flex"
+    >
       <li className="justifiy-center flex items-center">
         <a
           target="_blank"
@@ -80,6 +101,6 @@ function FooterLinks() {
           <FaWhatsapp className="relative z-20 size-10 text-gray-950 duration-500 group-hover:rotate-[360deg] group-hover:fill-white group-hover:text-white" />
         </a>
       </li>
-    </ul>
+    </motion.ul>
   );
 }
